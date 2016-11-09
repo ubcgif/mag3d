@@ -1,7 +1,7 @@
 MAG3D package
 =============
 
-MAG3D is a program library for carrying out forward modelling and inversion of surface, borehole, and airborne magnetic data in 3D. The contents of this manual are as follows:
+MAG3D v6.0 is a program library for carrying out forward modelling and inversion of surface, borehole, and airborne magnetic data in 3D. The contents of this manual are as follows:
 
 .. toctree::
     :numbered:
