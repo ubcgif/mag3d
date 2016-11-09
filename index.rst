@@ -11,7 +11,7 @@ MAG3D is a program library for carrying out forward modelling and inversion of s
     Background theory <content/theory>
     Elements <content/elements>    
     Running the programs <content/runPrograms>
-    Examples <content/examples>
     References <references>
-    
-
+  
+.. Examples need to be performed (nutcracker?)  
+..    Examples <content/examples>

@@ -15,7 +15,11 @@ Parameter definitions:
 
 -  geomag: Strength of the inducing field in nanoTesla (nT).
 
--  ainc, adec, idir: Inclination and declination of the anomaly projection. Set idir=0 for a multi-component dataset and idir=1 for a single component dataset where all the observations have the same inclination and declination of the anomaly projection.
+-  ainc, adec, idir: Inclination and declination of the anomaly projection.
+  
+    - ``idir=0``: multi-component dataset with projections given for each datum
+    - ``idir=1``: single component dataset where all the observations have the same inclination and declination of the anomaly projection.
+    - ``idir=2``: amplitude data. Input formats will be the same as idir=1 (i.e., do not include anomaly projection for each datum)
 
 -  ndat: Number of observations. When single component data are specified the number of observations is equal to the number of data locations. When multi-component data are specified the number of observations will exceed the number of data locations. For example, if three-component data are specified at :math:`N` locations, the number of observations is :math:`3N`.
 
@@ -38,4 +42,14 @@ The following is an example of total-field anomaly data.
     :align: center
     :figwidth: 50%
 
+The following is an example of borehole multi-component data.
 
+.. figure:: ../../images/boreholeMagEx.png
+    :align: center
+    :figwidth: 50%
+
+Below is an example of amplitude data (``idir=2``):
+
+.. figure:: ../../images/amplitudeMagEx.png
+    :align: center
+    :figwidth: 50%

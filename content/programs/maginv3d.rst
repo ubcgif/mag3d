@@ -5,11 +5,11 @@ MAGINV3D
 
 This program actually performs the 3D inversion of magnetic data. Command line usage is:
 
-``maginv3d maginv3d.inp [nThreads]``
+``maginv3d_60 maginv3d.inp [nThreads]``
 
 For a sample input file type:
 
-``maginv3d -inp``
+``maginv3d_60 -inp``
 
 The argument specifying the number of CPU threads used in the OpenMP format is optional. If this argument is not given to the program, chooses to use all of the CPU threads on the machine. This argument allows the user to specify half, for example, of the threads so that the program does not take all available RAM. Note that this option is not available in the MPI-based code used for clusters.
 
@@ -42,7 +42,6 @@ Format of the control file has been changed since previous version. Any numeric 
 .. figure:: ../../images/maginv3d.png
      :align: center
      :figwidth: 75%
-
  
 
 The parameters within the control file are:
@@ -52,7 +51,6 @@ The parameters within the control file are:
    #. ``mode=1``: the program chooses the trade off parameter by carrying out a line search so that the target value of data misfit is achieved (e.g., :math:`\phi_d^*=N`).
 
    #. ``mode=2``: the user inputs the trade off parameter.
-
 
 - ``par``, ``tolc`` Two real numbers that are depe.sust upon the value of mode.
    
@@ -91,13 +89,25 @@ The parameters within the control file are:
 
 - ``weights``: Name of the :ref:`weights file <weightsFile>` containing weighting matrices. If ``null`` is entered, default values of unity are used (no extra weighting).
 
+- ``VALUE P Qx Qy Qz``: The Lp/Lq exponents for the :ref:`model objective function <lplqMOF>`. The P is for the smallest model component and the Qs are for the spatial components. This line is optional and the L2 norm will be assumed for inputs of ``null`` or if the file ends on the previous line. 
+
+- ``scale,eps,epsGrad``: The scaling between Lp and Lq components in range :math:`[0,1]`. ``eps`` is an effective zero for the model values. ``epsGrad`` is an effective zero value for the change in model values spatially (i.e., derivatives). The program will calculate these zeros based on a single standard deviation of the L2 model if ``null`` is given with no extra scaling between Lp and Lq (``scale = 0.5``). **Note**: This line is optional and is only required if the LpLq constants are given or MOF derivatives below. 
+
+- ``mof.wt``: This input is currently disabled because of the upgrade to the model objective function. Use ``null`` or end the file prematurely. This could become cell-by-cell rotation model file in a future release.
 
 Example of control file
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Below is an example of a control file with comments:
+Below is an example of a control file for an L2 (smooth) inversion:
 
 .. figure:: ../../images/maginv3dEx.png
+     :align: center
+     :figwidth: 75%
+
+
+Below is an example of an input file for an Lp/Lq file (Lp = 0, Lqx = Lqy = Lqz = 2 for a sparse model with smooth gradients). The program will try to find a sparse model with smooth sides and fit the data misfit to within 5% of the desired misfit.
+
+.. figure:: ../../images/maginv3dLpLqEx.png
      :align: center
      :figwidth: 75%
 

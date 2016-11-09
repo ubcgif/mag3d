@@ -38,43 +38,7 @@ Each control file contains a formatted list of arguments, parameters and filenam
 Execution on a local network or commodity cluster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``MAG3D`` program library's main programs have been parallelized with Message Pass Interface (MPI). This allows running these codes on more than one computer in parallel. MPI installation package can be downloaded from http://www.mcs.anl.gov/research/projects/mpich2/. The following are the requirements for running an MPI job on a local network or cluster:
-
--  An identical version of MPI must be installed on all participating machines
-
--  The user must create an identical network account with matching "username" and "password" on every machine
-
--  Both the executable folder and the working directory should be "shared" and visible on every participating computer
-
--  Before the MPI job is executed, the firewall should be turned off on every participating computer
-
--  The path should be defined to the executable directory
-
-The following is an example of a command line executing an MPI process:
-
-``C:\Program Files\MPICH2\bin\mpiexec.exe -machinefile machine.txt nproc -priority 0 maginv3d``
-
-An explanation of the arguments used in this command line are:
-
--  Properly defined path to the ``mpiexec``.
-
--  The list of participating machines will be read from a "machine file."
-
--  Name of the machine file. This file lists the network names of the participating machines and number of processors to be allocated for the MPI job for each machine. The following is an example of a machine file:
-
-
-.. figure:: ../images/machineFile.png
-     :align: center
-     :figwidth: 50% 
-
-
-In this simple example, there are two participating machines (named ``machine01`` and ``machine02``) are required to allocate 16 processors for the MPI job.
-
--  The total number of allocated processors. This number should be equal to the sum of all processors listed for all machines in the machine file.
-
--  Sets the priority of the process. Integer grades from -1 (lowest) to 4 (highest) follow. Higher priority means that RAM and processing resources will be primarily allocated for this process, at expense of lower priority processes. Generally, a large job should be assigned a lower priority, as selective resource allocation may slow down other important processes on the computer, including those needed for stable functioning of the operating system.
-
--  The name of the executable. In our case it is assumed that there is an existing path to the executable directory, otherwise proper path should be provided.
+The ``MAG3D v6.0`` program library has is not currently implemented with Message Pass Interface (MPI).
 
 
 Input and output files
