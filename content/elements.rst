@@ -31,7 +31,6 @@ There are seven general files which are used in MAG3D. All are in ASCII text for
     Mesh <files/meshfile>
     Topography <files/topo>
     Observation/Location <files/magfile>
-    Model <files/model>
+    Model <files/modelfile>
     Weighting <files/weight>
-    Active model <files/model>
 

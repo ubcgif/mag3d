@@ -5,16 +5,16 @@
 Inversion
 =========
 
-Here the code **gzinv3d_v60.exe** invert synthetic gravity anomaly data to recover a density contrast model. We perform both a smooth and a sparse inversion. We use the same data that were computed in :ref:`forward modeling example <example_fwd>`. Gaussian noise were added to these data with a standard deviation of 5e-4 mgal. Uncertainties of 5e-4 mgal were assigned to all data
+Here the code **maginv3d_v60.exe** invert synthetic magntic data to recover a susceptibility model. We perform both a smooth and a sparse inversion. We use the same data that were computed in :ref:`forward modeling example <example_fwd>`. Gaussian noise were added to these data with a standard deviation of 0.5 nT. Uncertainties of 0.5 nT were assigned to all data
 
 Before running this example, you may want to do the following:
 
-     - `Download and open the zip folder containing the entire grav3d example <https://github.com/ubcgif/grav3d/raw/master/assets/grav3d_example.zip>`__ (if not done already)
-     - Learn how to :ref:`run gzinv3d_v60 and learn the format of the input files <gzinv3d>`
+     - `Download and open the zip folder containing the entire mag3d example <https://github.com/ubcgif/mag3d/raw/master/assets/mag3d_example.zip>`__ (if not done already)
+     - Learn how to :ref:`run maginv3d_v60 and learn the format of the input files <maginv3d>`
 
 
 
-.. important:: Since the sensitivities output by **gzsen3d_v60.exe** produce a large file, we have not provided them in the zip file. You need to complete the :ref:`compute sensitivities <example_sensitivity>` example to run the inversion.
+.. important:: Since the sensitivities output by **magsen3d_v60.exe** produce a large file, we have not provided them in the zip file. You need to complete the :ref:`compute sensitivities <example_sensitivity>` example to run the inversion.
 
 
 Smooth Inversion

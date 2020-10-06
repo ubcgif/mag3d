@@ -6,12 +6,12 @@
 Computing Sensitivities
 =======================
 
-Here the code **gzsen3d_v60.exe** is used to compute and output the sensitivities for use in the inversion. Here, we generate we use the input file **sensitivity_L2.inp** to generate sensitivities for a standard smooth inversion. We then use the input file **sensitivity_sparse.inp** to generate sensitivities that can be used for sparse inversion.
+Here the code **magsen3d_v60.exe** is used to compute and output the sensitivities for use in the inversion. Here, we generate we use the input file **sensitivity_L2.inp** to generate sensitivities for a standard smooth inversion. We then use the input file **sensitivity_sparse.inp** to generate sensitivities that can be used for sparse inversion.
 
 Before running this example, you may want to do the following:
 
-	- `Download and open the zip folder containing the entire grav3d example <https://github.com/ubcgif/grav3d/raw/master/assets/grav3d_example.zip>`__ (if not done already)
-	- Learn how to :ref:`compute sensitivities and learn the format of the input files <gzsen3d>`
+	- `Download and open the zip folder containing the entire mag3d example <https://github.com/ubcgif/mag3d/raw/master/assets/mag3d_example.zip>`__ (if not done already)
+	- Learn how to :ref:`compute sensitivities and learn the format of the input files <magsen3d>`
 
 
 Smooth Inversion
