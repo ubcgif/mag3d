@@ -1,7 +1,7 @@
 .. _overview:
 
-MAG3D package overview
-======================
+MAG3D v5 Package Overview
+=========================
 
 Description
 -----------
