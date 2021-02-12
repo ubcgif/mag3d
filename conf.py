@@ -35,6 +35,8 @@ extensions = [
     'sphinxcontrib.bibtex'
 ]
 
+bibtex_bibfiles = ['reference.bib']
+
 # Number figures
 numfig = True
 

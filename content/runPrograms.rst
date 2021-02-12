@@ -1,55 +1,56 @@
+.. _running:
+
 Running the programs
 ====================
 
-The software package MAG3D uses five general codes:
+This section provides describes how to run all executables pertaining to the MAG3D package.
 
-- ``MAGFOR3D``: performs forward modelling.
+.. note::
 
-- ``PFWEIGHT``: calculates the depth weighting function.
+    All executable files, input files, output filenames and files specified within input files can be specified in the following manner:
 
-- ``MAGSEN3D``: calculates sensitivity.
+    - as just the filename if contained within the current working directory (Example: *filename.txt*)
+    - as a file path relative to the current working directory (Example: *sub_dir\\filename.txt*)
+    - as the full path (Example: *C:\\Users\\Name\\Tests\\filename.txt*)
 
-- ``MAGINV3D``: performs 3D inversion of magnetic data
-
-- ``MAGPRE3D``: multiplies the sensitivity file by the model to get the predicted data.
-
-This section discusses the use of these codes individually.
-
-Introduction
-------------
-
-All programs in the package can be executed under Windows or Linux environments. They can be run by typing the program name followed by a control file in the ``command prompt`` (Windows) or ``terminal`` (Linux). They can be executed directly on the command line or in a shell script or batch file. When a program is executed without any arguments, it will print the usage to screen.
-
-Execution on a single computer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The command format and the control, or input, file format on a single machine are described below. Within the command prompt or terminal, any of the programs can be called using:
-
-program arg\ :math:`_1` [arg\ :math:`_2` :math:`\cdots` arg\ :math:`_i`]
-
-where:
-
-- program: the name of the executable
-
-- arg\ :math:`_i`: a command line argument, which can be a name of corresponding required or optional file. Typing as the control file, serves as a help function and returns an example input file. Some executables do not require control files and should be followed by multiple arguments instead. This will be discussed in more detail later in this section. Optional command line arguments are specified by brackets: `[ ]`
-
-Each control file contains a formatted list of arguments, parameters and filenames in a combination and sequence specific for the executable, which requires this control file. Different control file formats will be explained further in the document for each executable.
-
-Execution on a local network or commodity cluster
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The ``MAG3D v6.0`` program library has is not currently implemented with Message Pass Interface (MPI).
+    Executable files should **not** be renamed. However, input file names can be specified by the user if desired.
 
 
-Input and output files
-----------------------
+Executables
+-----------
+
+The program library consists of the programs:
+
+    - **magfor3d_60.exe**: A code for forward modeling total magnetic data for a magnetic susceptibility model.
+
+    - **magsen3d_60.exe**: calculates the sensitivity matrix for the inversion and outputs sensitivity weights.
+
+    - **maginv3d_60.exe**: performs 3D inversion of magnetic data to recover a susceptibility model.
+
+    - **magpre3d.exe**: multiplies the sensitivity file by the model to get the predicted data. This rarely used utility multiplies a model by the sensitivity matrix in to produce the predicted data. This program is included so that users who are not familiar with the wavelet transform and the structure of can utilize the available sensitivity matrix to carry out model studies.
+
+Utility codes relevant to this package include:
+
+   - **blk3cell.exe:** A utility for generating block models on tensor meshes
+
+
+Contents
+--------
+
+To learn the specifics of running each executable, see the following sections:
 
   .. toctree::
     :maxdepth: 1
 
-    Forward modelling (MAGFOR3D) <programs/magfor3d>
-    Depth/distance weighting (PFWEIGHT) <programs/pfweight>
-    Sensitivity calculation (MAGSEN3D) <programs/magsen3d>
-    Inversion (MAGINV3D) <programs/maginv3d>
-    Predicted data from sensitivity (MAGPRE3D) <programs/magpre3d>
+    Create Model <programs/createModel>
+    Forward Modeling <programs/forward>
+    Sensitivity Matrix <programs/sensitivity>
+    Inversion <programs/inversion>
+    Predict Data with Pre-Computed Sensitivity Matrix <programs/magpre3d>
+
+
+
+
+
+
 

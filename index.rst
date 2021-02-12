@@ -11,6 +11,8 @@ MAG3D v6.0 is a program library for carrying out forward modelling and inversion
     Background theory <content/theory>
     Elements <content/elements>    
     Running the programs <content/runPrograms>
+    Example with TMI Data <content/examples_tmi>
+    Example with Amplitude Data <content/examples_amp>
     References <references>
   
 .. Examples need to be performed (nutcracker?)  

@@ -3,27 +3,44 @@
 Elements of the program MAG3D
 =============================
 
+This section provides a brief description of each program in the MAG3D v6.0 library. In addition, we describe the file formats for all input and supporting files used by the coding library.
+
 Introduction
 ------------
 
 The program library consists of the programs:
 
-#. **MAGFOR3D**: performs forward modelling.
+    - **magfor3d_60.exe**: A code for forward modeling total magnetic data for a magnetic susceptibility model.
 
-#. **PFWEIGHT**: calculates depth or distance weighting function.
+    - **magsen3d_60.exe**: calculates the sensitivity matrix for the inversion and outputs sensitivity weights.
 
-#. **MAGSEN3D**: calculates sensitivity for the inversion.
+    - **maginv3d_60.exe**: performs 3D inversion of magnetic data to recover a susceptibility model.
 
-#. **MAGINV3D**: performs 3D inversion of magnetic data
+    - **magpre3d.exe**: multiplies the sensitivity file by the model to get the predicted data. This rarely used utility multiplies a model by the sensitivity matrix in to produce the predicted data. This program is included so that users who are not familiar with the wavelet transform and the structure of can utilize the available sensitivity matrix to carry out model studies.
 
-#. **MAGPRE3D**: multiplies the sensitivity file by the model to get the predicted data. This rarely used utility multiplies a model by the sensitivity matrix in to produce the predicted data. This program is included so that users who are not familiar with the wavelet transform and the structure of can utilize the available sensitivity matrix to carry out model studies.
+Utility codes relevant to this package include:
 
-Each of the above programs requires input files and the specification of parameters in order to run. However, some files are used by a number of programs. Before detailing the procedures for running each of the above programs, we first present information about these general files.
+   - **blk3cell.exe:** A utility for generating block models on tensor meshes
 
-General files for MAG3D programs
----------------------------------
 
-There are seven general files which are used in MAG3D. All are in ASCII text format. Input files can have any user-defined name. *Program output files have restricted file names that will be over-written if already in the directory*. Also the filename extensions are not important. Many prefer to use the filename convention so that files are more easily read and edited in the Windows environment. File and file locations may have spaces in the name or path, but it is discouraged. The file name (absolute or relative path) must be 500 characters or less in length. The files contain components of the inversion:
+Main Input Files
+----------------
+
+Here, we describe the main input files for executables contained with the MAG3D v6.0 coding package.
+
+.. toctree::
+    :maxdepth: 1
+
+    Create model <inputfiles/createModel>
+    Forward modeling <inputfiles/forward>
+    Sensitivity matrix <inputfiles/sensitivity>
+    Inversion <inputfiles/inversion>
+
+
+General Files for MAG3D Executables
+-----------------------------------
+
+Here, we describe the formats of supplementary files used to run MAG3D v6.0.
 
 .. toctree::
     :maxdepth: 1
@@ -31,7 +48,6 @@ There are seven general files which are used in MAG3D. All are in ASCII text for
     Mesh <files/meshfile>
     Topography <files/topo>
     Observation/Location <files/magfile>
-    Model <files/model>
+    Susceptibility and active models <files/model>
     Weighting <files/weight>
-    Active model <files/model>
 
