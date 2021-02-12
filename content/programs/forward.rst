@@ -18,7 +18,7 @@ To run the executable, open a command window. In order, enter the path to the *m
 Units
 ^^^^^
 
-    - **Magnetic data:** total magnetic intensity data in nT
+    - **Magnetic data:** total magnetic intensity data or amplitude data in nT
     - **Magnetic susceptibility model:** magnetic susceptibility in SI
 
 
