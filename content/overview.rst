@@ -1,10 +1,24 @@
 .. _overview:
 
-MAG3D v6 Package Overview
-=========================
+MAG3D v6.0 Package Overview
+===========================
 
-Description
------------
+Highlights of v6.0
+------------------
+
+Many advancements have been made since the previous version of this coding package.
+Highlights of Mag3D v6.0 include:
+
+
+   - the ability to forward model and invert surface, borehole, and airborne magnetic data in 3D
+   - the ability to forward model and invert both total magnetic intensity and amplitude data
+   - sensitivity weighting so that targets recovered through inversion are placed at the correct depth
+   - the ability to recover compact and/or blocky models using sparse norms, in additional to smooth models using a standard least-squares approach
+   - implementing wavelet compression to reduce the storage cost of the sensitivity matrix and allow the user to solve larger problems
+
+
+General Code Description
+------------------------
 
 is a program library for carrying out forward modelling and inversion of surface, airborne, and/or borehole magnetic data in the presence of a three dimensional Earth. The program library carries out the following functions:
 
@@ -43,13 +57,19 @@ Program library content
 Executable programs
 ^^^^^^^^^^^^^^^^^^^
 
-This package consists of five major programs:
+The program library consists of the programs:
 
-   - PFWEIGHT: calculates the depth/distance weighting function
-   - MAGFOR3D: performs forward modelling
-   - MAGSEN3D: calculates the sensitivity matrix
-   - MAGPRE3D: multiplies the sensitivity file by the model to get the predicted data
-   - MAGINV3D: performs 3D magnetic inversion
+    - **magfor3d_60.exe**: A code for forward modeling total magnetic data for a magnetic susceptibility model.
+
+    - **magsen3d_60.exe**: calculates the sensitivity matrix for the inversion and outputs sensitivity weights.
+
+    - **maginv3d_60.exe**: performs 3D inversion of magnetic data to recover a susceptibility model.
+
+    - **magpre3d.exe**: multiplies the sensitivity file by the model to get the predicted data. This rarely used utility multiplies a model by the sensitivity matrix in to produce the predicted data. This program is included so that users who are not familiar with the wavelet transform and the structure of can utilize the available sensitivity matrix to carry out model studies.
+
+Utility codes relevant to this package include:
+
+   - **blk3cell.exe:** A utility for generating block models on tensor meshes
 
 Graphical user interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -77,16 +97,3 @@ Two additional notes about installation:
 -  Do not store anything in the "bin" directory other than executable applications and Graphical User Interface applications (GUIs).
 
 -  A Message Pass Interface (MPI) version is available for Linux upon and the installation instructions will accompany the code.
-
-
-Highlights of changes from version 5.0
---------------------------------------
-
-
-#. Improvements on the wavelet compression.
-
-#. Minor change in sensitivity formulation and matrix-vector multiplication to allow MAG3D to handle very large datasets, for example, on a cluster.
-
-#. Addition of :ref:`Sparseness and blockiness <lplqMOF>` in the model objective function. This allows the user to recover blocky models and explore the affect of the assumptions the model objective function poses.
-
-
