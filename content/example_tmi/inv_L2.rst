@@ -17,14 +17,14 @@ Here, the code **magsen3d_60.exe** and the input file **sens_L2.inp** (:ref:`see
 
 To compute the sensitivities, the following input file was used. Since we are performing a least squares inversion, a flag of *1* is entered on the last line of the input file.
 
-.. figure:: ../inputfiles/images/create_sens_L2_input.PNG
+.. figure:: ../inputfiles/images/create_sens_L2_input.png
      :align: center
      :width: 700
 
 
 The distance weighting applied to the inversion is output by **magsen3d_60.exe** and is shown below.
 
-.. figure:: images/sensitivity.png
+.. figure:: images/sensitivity.PNG
      :align: center
      :width: 700
 

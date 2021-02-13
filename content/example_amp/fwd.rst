@@ -15,7 +15,7 @@ Before running this example, you may want to do the following:
 The total magnetic intensity data output by the simulation is shown below.
 
 
-.. figure:: images/dpred.png
+.. figure:: images/dpred.PNG
      :align: center
      :width: 700
 

@@ -21,7 +21,7 @@ The resulting model shows a more susceptible block (:math:`\kappa` = 0.025 SI) i
 The locations used to model the data are shown as well.
 
 
-.. figure:: images/true_model.png
+.. figure:: images/true_model.PNG
      :align: center
      :width: 500
 

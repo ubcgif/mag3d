@@ -17,14 +17,14 @@ Here, the code **magsen3d_60.exe** and the input file **sens_sparse.inp** (:ref:
 
 To compute the sensitivities, the following input file was used. Since we are no longer performed an least-squares inversion, a flag of *0* must be entered on the last line of the input file.
 
-.. figure:: ../inputfiles/images/create_sens_sparse_input.PNG
+.. figure:: ../inputfiles/images/create_sens_sparse_input.png
      :align: center
      :width: 700
 
 
 The distance weighting applied to the inversion is output by **magsen3d_60.exe** and is shown below. You may notice that the distance weighting remains the same whether or not you are inverting with sparse norms.
 
-.. figure:: images/sensitivity.png
+.. figure:: images/sensitivity.PNG
      :align: center
      :width: 700
 
