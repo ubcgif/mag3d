@@ -59,7 +59,7 @@ Executable programs
 
 The program library consists of the programs:
 
-    - **magfor3d_60.exe**: A code for forward modeling total magnetic data for a magnetic susceptibility model.
+    - **magfor3d_60.exe**: A code for forward modeling magnetic data for a magnetic susceptibility model.
 
     - **magsen3d_60.exe**: calculates the sensitivity matrix for the inversion and outputs sensitivity weights.
 
