@@ -3,53 +3,58 @@
 Magnetic observations file
 ==========================
 
-This file is used to specify the inducing field parameters, anomaly type, observation locations, and the observed magnetic anomalies with estimated standard deviation. The values of parameters specifying the inducing field anomaly type and observation locations are identical to those in file. The output of the forward modelling program has the same structure except that the column of standard deviations for the error is omitted. Lines starting with ! are comments. The structure of the magnetics observations file is:
+Here, we demonstrate the format of the survey, predicted data and observations files that are compatible with **magfor3d_60.exe** and **maginv3d_60.exe**. For forward modeling, the survey file will contain the observation locations, the properties of the Earth's field, the definition of the data type (TMI or amplitude) and optional columns for defining magnetizations that are not along the Earth's field. In addition to this information, the predicted data file will contain an additional column containing the data predicted for a given model. Observation files will contain a data column as well as a column for the uncertainties on the data.
+
+The general format for data files compatible with **magfor3d_60.exe** and **maginv3d_60.exe** is as follows:
 
 .. figure:: ../../images/magObs.png
     :align: center
-    :figwidth: 50%
+    :width: 500
 
-Parameter definitions:
+Parameter Definitions
+^^^^^^^^^^^^^^^^^^^^^
 
--  incl, decl: Inclination and declination of the inducing magnetic field. The declination is specified positive east with respect to the northing used in the mesh and locations files. The inclination is positive down.
+    - *!:* Any line beginning with a ! is ignored an represents a comment line.
 
--  geomag: Strength of the inducing field in nanoTesla (nT).
+    -  **incl, decl** and **geomag:** Defines the orientation and intensitity of the Earth's magnetic field. *incl* is the inclination, *decl* is the declination and *geomag* is the intensity in nT.
 
--  ainc, adec, idir: Inclination and declination of the anomaly projection.
+    - **ainc, adec** and **dir:** Defines the orientation of the magnetization of the cells and defines the data columns in the file. 
   
-    - ``idir=0``: multi-component dataset with projections given for each datum
-    - ``idir=1``: single component dataset where all the observations have the same inclination and declination of the anomaly projection.
-    - ``idir=2``: amplitude data. Input formats will be the same as idir=1 (i.e., do not include anomaly projection for each datum)
+        - *dir=0*: The data are TMI data projected along the direction defined by the Earth's field (i.e. *incl* and *decl*). In this case, the parameters *ainc* and *adec* are ignored. The user must define the magnetization direction for each cell independently by including the two optional columns ( [:math:`ainc_i \;\, adec_i`] ). *Note that for each cell, you assume the magnitude of the magnetization is* :math:`\kappa B_0 / \mu_0`.
+        
+        - *dir=1*: The data are TMI data projected along the direction defined by the Earth's field (i.e. *incl* and *decl*). In this case, the parameters *ainc* and *adec* define the magnetization direction that is used for all cells. If the magnetization is strictly induced (no remanence), we set *ainc* and *adec* to be the same as *incl* and *decl* on the previous line. Therefore we do not include the two optional columns ( [:math:`ainc_i \;\, adec_i`] ) .
 
--  ndat: Number of observations. When single component data are specified the number of observations is equal to the number of data locations. When multi-component data are specified the number of observations will exceed the number of data locations. For example, if three-component data are specified at :math:`N` locations, the number of observations is :math:`3N`.
+        - *dir=2*: The data are amplitude data. In this case, the parameters *ainc* and *adec* define the magnetization direction that is used for all cells. If the magnetization is strictly induced (no remanence), we set *ainc* and *adec* to be the same as *incl* and *decl* on the previous line. Once again, we do not include the two optional columns ( [:math:`ainc_i \;\, adec_i`] ) .
 
--  E, N, ELEV: Easting, northing, and elevation of the observation measured in meters. Elevation should be above the topography for surface data, and below the topography for borehole data. The observation locations can be listed in any order.
+    - **ndat:** Number of observation locations.
 
-- (ainc\ :math:`_{n}`, adec\ :math:`_{n}`): Inclination and declination of the anomaly projection for nth observation. This is used only when idir=0. The brackets :math:`[\cdots]` indicate that these two field are optional depending upon the value of idir.
+    - **E, N, ELEV:** Easting, Northing and elevation for each observation location in meters. Elevation should be above the topography for surface data, and below the topography for borehole data. The observation locations can be listed in any order.
 
--  Mag\ :math:`_n`: Magnetic anomaly data, measured in nT.
+    - **[** :math:`\mathbf{ainc_i \;\, adec_i}` **]:** If the parameter *dir=0*, these column must be included in the survey/observed data file. These columns independently define the inclination and declination of the magnetization for each cell.
 
--  Err\ :math:`_n`: Standard deviation of Mag\ :math:`_n`. This represents the absolute error. It must be positive and non-zero.
+    -  :math:`\mathbf{Mag_n}`: Magnetic anomaly data (TMI or amplitude), measured in nT. This column is only present in *predicted data* and *observed data* files.
 
-**NOTE:** It should be noted that the data are **extracted anomalies** which are derived by removing the regional from the field measurements. It is crucial that the data be prepared as such. The total field anomaly is calculated when ``ainc=incl`` and ``adec=decl``. An example is inputting the vertical field anomaly, Bz, calculated by setting ``ainc=90`` and ``adec=0``. The easting and northing components are respectively given by the inclination and declination pairs ``(0, 90)`` and ``(0, 90)``. The user can specify other ``(ainc, adec)`` pairs to calculate the other anomaly components such as the Bx or By. Easting, northing, and elevation information should be in the same coordinate system as defined in the mesh.
+    -  :math:`\mathbf{Err_n}`: Standard deviation for the error on the corresponding datum (i.e. uncertainty). This represents the absolute error. It must be positive and non-zero. This column is only required in *observed data* files.
+
+.. important:: It should be noted that the data are **extracted anomalies** which are derived by removing the regional from the field measurements. It is crucial that the data be prepared as such. The total field anomaly is calculated when ``ainc=incl`` and ``adec=decl``. An example is inputting the vertical field anomaly, Bz, calculated by setting ``ainc=90`` and ``adec=0``. The easting and northing components are respectively given by the inclination and declination pairs ``(0, 90)`` and ``(0, 90)``. The user can specify other ``(ainc, adec)`` pairs to calculate the other anomaly components such as the Bx or By. Easting, northing, and elevation information should be in the same coordinate system as defined in the mesh.
 
 Examples 
 --------
 
-The following is an example of total-field anomaly data.
+Observed data file for standard TMI data. The magnetization is in the same direction as the inducing field for all cells (no remanence). This is done by setting *dir=1* and letting the inclination and declination for the magnetization be the same as the Earth's field.
 
 .. figure:: ../../images/surfaceMagEx.png
     :align: center
-    :figwidth: 50%
+    :width: 500
 
-The following is an example of borehole multi-component data.
+Observed data file, however the orientation of the magnetization for each cell is being defined independently for each cell. This is done by setting *dir=0* and including the two optional columns.
 
 .. figure:: ../../images/boreholeMagEx.png
     :align: center
-    :figwidth: 50%
+    :width: 500
 
-Below is an example of amplitude data (``idir=2``):
+Observed data file for amplitude data. This is done by setting *dir=2*.
 
 .. figure:: ../../images/amplitudeMagEx.png
     :align: center
-    :figwidth: 50%
+    :width: 500
