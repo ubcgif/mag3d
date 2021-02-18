@@ -1,7 +1,7 @@
 .. _elements:
 
-Elements of the program MAG3D
-=============================
+Elements of the Mag3D v6.0 Package
+==================================
 
 This section provides a brief description of each program in the MAG3D v6.0 library. In addition, we describe the file formats for all input and supporting files used by the coding library.
 
@@ -20,7 +20,9 @@ The program library consists of the programs:
 
 Utility codes relevant to this package include:
 
-   - **blk3cell.exe:** A utility for generating block models on tensor meshes
+   - **blk3cell.exe:** A utility for generating block models on tensor 
+
+   - **pfweight.exe:** A utility for computing depth or distance weighting for potential field inversion
 
 
 Main Input Files
@@ -33,6 +35,7 @@ Here, we describe the main input files for executables contained with the MAG3D 
 
     Create model <inputfiles/createModel>
     Forward modeling <inputfiles/forward>
+    Depth/Distance weights <inputfiles/pfweights>
     Sensitivity matrix <inputfiles/sensitivity>
     Inversion <inputfiles/inversion>
 

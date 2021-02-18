@@ -71,6 +71,8 @@ Utility codes relevant to this package include:
 
    - **blk3cell.exe:** A utility for generating block models on tensor meshes
 
+   - **pfweight.exe:** A utility for computing depth or distance weighting for potential field inversion
+
 Graphical user interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 GUI-based utilities for these codes include respective viewers for the data and models. They are only available on Windows platforms and can be freely downloaded through the UBC-GIF website:

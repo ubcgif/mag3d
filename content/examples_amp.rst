@@ -27,5 +27,6 @@ The full example is parsed into 4 sections:
 
     Create susceptibility model <example_amp/create_model>
     Forward modeling <example_amp/fwd>
+    Distance/depth weighting <example_amp/weights>
     Least-squares inversion <example_amp/inv_L2>
     Sparse-norm inversion <example_amp/inv_sparse>

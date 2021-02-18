@@ -27,6 +27,7 @@ The full example is parsed into 4 sections:
 
     Create susceptibility model <example_tmi/create_model>
     Forward modeling <example_tmi/fwd>
+    Distance/depth weighting <example_tmi/weights>
     Least-squares inversion <example_tmi/inv_L2>
     Sparse-norm inversion <example_tmi/inv_sparse>
 

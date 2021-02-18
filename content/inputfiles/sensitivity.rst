@@ -20,7 +20,7 @@ The lines of input file for the executable are as follows:
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
 | 3      | :ref:`Topography<mag3d_input_inv_ln3>`                             | topography                                                        |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 4      | :ref:`Distance weights<mag3d_input_inv_ln4>`                       | name of distance weights file                                     |
+| 4      | :ref:`Distance/depth weights<mag3d_input_inv_ln4>`                 | name of distance/depth weights file                               |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
 | 5      | :ref:`Wavelet type<mag3d_input_inv_ln5>`                           | wavelet type used in compression                                  |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
@@ -62,7 +62,7 @@ Line Descriptions
 
 .. _mag3d_input_inv_ln4:
 
-    - **Distance Weights:** Magnetic inversion has a tendancy place susceptible bodies near the observation locations due to high sensitivities. *magsen3d_60.exe* applies a distance weighting to counteract these effects. Here, the user provides the file name for file an output file that contains the weights being applied to each cell.
+    - **Distance/Depth Weights:** path to the depth or distance weights file output by the program *pfweight.exe* .
 
 .. _mag3d_input_inv_ln5:
 

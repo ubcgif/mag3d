@@ -33,6 +33,8 @@ Utility codes relevant to this package include:
 
    - **blk3cell.exe:** A utility for generating block models on tensor meshes
 
+   - **pfweight.exe:** A utility for computing depth or distance weighting for potential field inversion
+
 
 Contents
 --------
@@ -44,6 +46,7 @@ To learn the specifics of running each executable, see the following sections:
 
     Create Model <programs/createModel>
     Forward Modeling <programs/forward>
+    Depth/Distance Weighting <programs/pfweight>
     Sensitivity Matrix <programs/sensitivity>
     Inversion <programs/inversion>
     Predict Data with Pre-Computed Sensitivity Matrix <programs/magpre3d>

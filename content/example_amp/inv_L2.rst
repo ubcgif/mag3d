@@ -25,13 +25,6 @@ To compute the sensitivities, the following input file was used. Since we are pe
      :width: 700
 
 
-The distance weighting applied to the inversion is output by **magsen3d_60.exe** and is shown below.
-
-.. figure:: images/sensitivity.PNG
-     :align: center
-     :width: 700
-
-
 Inversion
 ---------
 
