@@ -20,7 +20,7 @@ Here is the input file for **pfweight.exe**
 The resulting distance weights are plotted on the mesh below.
 
 
-.. figure:: images/distance_weights.png
+.. figure:: images/distance_weights.PNG
      :align: center
      :width: 500
 
