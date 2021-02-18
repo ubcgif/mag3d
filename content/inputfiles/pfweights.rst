@@ -32,7 +32,7 @@ An example of the input file for creating weights is shown below.
      :align: center
      :width: 700
 
-     Example input file for creating distance weighting (`Download <https://github.com/ubcgif/mag3d/raw/v6/assets/input_files/pfweight.inp>`__ ).
+     Example input file for creating distance weighting (`Download <https://github.com/ubcgif/mag3d/raw/v6/assets/mag3d_input/pfweight.inp>`__ ).
 
 
 Line Descriptions

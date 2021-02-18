@@ -41,14 +41,14 @@ The lines of input file for **maginv3d_60.exe** are as follows:
 | 15     | :ref:`MOF derivatives<mag3d_input_inv_ln15>`                       | Set as *null* for the time-being                                  |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
 
-An example of the input file for L2 inversion is shown below. You may also `Download the input file for a sparse norm inversion <https://github.com/ubcgif/mag3d/raw/v6/assets/input_files/inv_sparse.inp>`__ .
+An example of the input file for L2 inversion is shown below. You may also `Download the input file for a sparse norm inversion <https://github.com/ubcgif/mag3d/raw/v6/assets/mag3d_input/inv_sparse.inp>`__ .
 
 
 .. figure:: images/create_inv_L2_input.png
      :align: center
      :width: 700
 
-     Example input file for the inversion (`Download <https://github.com/ubcgif/mag3d/raw/v6/assets/input_files/inv_L2.inp>`__ ).
+     Example input file for the inversion (`Download <https://github.com/ubcgif/mag3d/raw/v6/assets/mag3d_input/inv_L2.inp>`__ ).
 
 
 Line Descriptions

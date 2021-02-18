@@ -3,11 +3,11 @@ MAG3D v6.0 package
 
 MAG3D v6.0 is a program library for carrying out 3D forward modelling and inversion of magnetic data.
 
-.. figure:: content/example_tmi/images/final_model_sparse.png
+.. figure:: images/title_image.PNG
      :align: center
      :width: 700
 
-     True model and recovered models using least-squares and sparse-norm inversion.
+     True model, magnetic data and the recovered model.
 
 **Highlights of Mag3D v6.0**
 
