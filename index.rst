@@ -9,7 +9,9 @@ MAG3D v6.0 is a program library for carrying out 3D forward modelling and invers
 
      True model, magnetic data and the recovered model.
 
-**Highlights of Mag3D v6.0**
+
+Highlights of Mag3D v6.0
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Many advancements have been made since the previous version of this coding package.
 Highlights of Mag3D v6.0 include:
@@ -22,7 +24,14 @@ Highlights of Mag3D v6.0 include:
     - implementing wavelet compression to reduce the storage cost of the sensitivity matrix and allow the user to solve larger problems
 
 
-**Webpage Contents:**
+Sponsorship
+^^^^^^^^^^^
+
+The current improvements have been funded by the GIFtools Consortium which included “Potential fields and software for advanced inversion” (2012-2020) sponsored by Teck, Glencore, BHP Billiton, Vale, Cameco, Barrick, Rio Tinto, and Anglo American.
+
+
+Contents
+^^^^^^^^
 
 .. toctree::
     :numbered:
