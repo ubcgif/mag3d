@@ -1,7 +1,10 @@
-MAG3D v6.0 package
-==================
+.. important:: In 2022-10, a more exact definition of the regularization was implemented in **mag3dinv_60.exe** for sparse-norm inversion. The package containing the improved executable was released as **MAG3D v6.0.1**. Be aware that MAG3D v6.0 and v6.0.1 have all the same features and use the same executable names. Differences in the recovered model using each package were found to be insignificant.
 
-MAG3D v6.0 is a program library for carrying out 3D forward modelling and inversion of magnetic data.
+
+MAG3D v6.0/v6.0.1 package
+=========================
+
+MAG3D v6.0/v6.0.1 is a program library for carrying out 3D forward modelling and inversion of magnetic data.
 
 .. figure:: images/title_image.PNG
      :align: center
@@ -10,11 +13,11 @@ MAG3D v6.0 is a program library for carrying out 3D forward modelling and invers
      True model, magnetic data and the recovered model.
 
 
-Highlights of Mag3D v6.0
-^^^^^^^^^^^^^^^^^^^^^^^^
+Highlights of MAG3D v6.0/v6.0.1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Many advancements have been made since the previous version of this coding package.
-Highlights of Mag3D v6.0 include:
+Highlights of MAG3D v6.0/v6.0.1 include:
 
 
     - the ability to forward model and invert surface, borehole, and airborne magnetic data in 3D

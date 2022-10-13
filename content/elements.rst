@@ -1,9 +1,9 @@
 .. _elements:
 
-Elements of the Mag3D v6.0 Package
-==================================
+Elements of the Mag3D v6.0/v6.0.1 Package
+=========================================
 
-This section provides a brief description of each program in the MAG3D v6.0 library. In addition, we describe the file formats for all input and supporting files used by the coding library.
+This section provides a brief description of each program in the MAG3D v6.0/v6.0.1 library. In addition, we describe the file formats for all input and supporting files used by the coding library.
 
 Introduction
 ------------
@@ -28,7 +28,7 @@ Utility codes relevant to this package include:
 Main Input Files
 ----------------
 
-Here, we describe the main input files for executables contained with the MAG3D v6.0 coding package.
+Here, we describe the main input files for executables contained with the MAG3D v6.0/v6.0.1 coding package.
 
 .. toctree::
     :maxdepth: 1
@@ -43,7 +43,7 @@ Here, we describe the main input files for executables contained with the MAG3D 
 General Files for MAG3D Executables
 -----------------------------------
 
-Here, we describe the formats of supplementary files used to run MAG3D v6.0.
+Here, we describe the formats of supplementary files used to run MAG3D v6.0/v6.0.1.
 
 .. toctree::
     :maxdepth: 1

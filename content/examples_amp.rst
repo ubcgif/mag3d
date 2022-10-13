@@ -7,7 +7,7 @@ Example with Amplitude Data
      :align: center
      :width: 700
 
-Here, the program library for Mag3d v6.0 will be used to:
+Here, the program library for Mag3d v6.0.1 will be used to:
 
     - create a susceptibility model on a tensor mesh
     - forward model magnetic data for a given survey and model
