@@ -20,5 +20,5 @@ Input files
 Output file
 -----------
 
-The output file is a :ref:`predicted data file <magfile>` (omitting uncertainty column) and is named ``magpre3d.mag``. This program can be used to reproduce output predicted files from :ref:`mag3d_inv`.
+The output file is a :ref:`predicted data file <magfile>` (omitting uncertainty column) and is named ``magpre3d.mag``. This program can be used to reproduce output predicted files from :ref:`maginv3d_60 <mag3d_inv>`.
 
