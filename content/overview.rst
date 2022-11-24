@@ -1,22 +1,37 @@
 .. _overview:
 
-.. important:: In 2022-10, a more exact definition of the regularization was implemented in **maginv3d_60.exe** for sparse-norm inversion. The package containing the improved executable was released as **MAG3D v6.0.1**. Be aware that MAG3D v6.0 and v6.0.1 have all the same features and use the same executable names. Differences in the recovered model using each package were found to be insignificant.
+.. important:: The features and executable names within the MAG3D the v6.0, v6.0.1 and v6.0.2 packages remain the same. Differences in version number correspond to improvements in performance.
 
-MAG3D v6.0/v6.0.1 Package Overview
-==================================
 
-Highlights of v6.0/v6.0.1
--------------------------
+MAG3D v6 Package Overview
+=========================
 
-Many advancements have been made since the previous version of this coding package.
-Highlights of Mag3D v6.0/v6.0.1 include:
+Highlights
+----------
 
+**General MAG3D Package Highlights:**
 
     - the ability to forward model and invert surface, borehole, and airborne magnetic data in 3D
-    - the ability to forward model and invert both total magnetic intensity and amplitude data
-    - sensitivity weighting so that targets recovered through inversion are placed at the correct depth
-    - the ability to recover compact and/or blocky models using sparse norms, in additional to smooth models using a standard least-squares approach
+    - distance weighting so that targets recovered through inversion are placed at the correct depth
     - implementing wavelet compression to reduce the storage cost of the sensitivity matrix and allow the user to solve larger problems
+
+
+**v6.0 Highlights:**
+
+    - the ability to forward model and invert both total magnetic intensity and amplitude data
+    - the ability to recover compact and/or blocky models using sparse norms, in additional to smooth models using a standard least-squares approach
+
+
+**v6.0.1 Highlights:**
+
+    - implementation of a more exact definition for the regularization 
+
+
+**v6.0.2 Highlights:**
+
+    - general sensitivities that can be used for least-squares or sparse-norm inversion
+    - improved wavelet compression which acts on weighted sensitivities
+    - update preconditionner during IRLS iterations to reduce number of conjugate gradient solves
 
 
 General Code Description

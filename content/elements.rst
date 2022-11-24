@@ -1,9 +1,12 @@
 .. _elements:
 
-Elements of the Mag3D v6.0/v6.0.1 Package
-=========================================
+.. important:: The features and executable names within the MAG3D the v6.0, v6.0.1 and v6.0.2 packages remain the same. Differences in version number correspond to improvements in performance.
 
-This section provides a brief description of each program in the MAG3D v6.0/v6.0.1 library. In addition, we describe the file formats for all input and supporting files used by the coding library.
+
+Elements of the MAG3D v6 Package
+================================
+
+This section provides a brief description of each program in the MAG3D v6 library. In addition, we describe the file formats for all input and supporting files used by the coding library.
 
 Introduction
 ------------
@@ -28,7 +31,7 @@ Utility codes relevant to this package include:
 Main Input Files
 ----------------
 
-Here, we describe the main input files for executables contained with the MAG3D v6.0/v6.0.1 coding package.
+Here, we describe the main input files for executables contained with the MAG3D v6 coding package.
 
 .. toctree::
     :maxdepth: 1
@@ -40,10 +43,10 @@ Here, we describe the main input files for executables contained with the MAG3D 
     Inversion <inputfiles/inversion>
 
 
-General Files for MAG3D Executables
------------------------------------
+Supplementary Files
+-------------------
 
-Here, we describe the formats of supplementary files used to run MAG3D v6.0/v6.0.1.
+Here, we describe the formats of supplementary files used to run MAG3D v6.
 
 .. toctree::
     :maxdepth: 1
