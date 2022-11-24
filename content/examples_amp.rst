@@ -1,6 +1,6 @@
 .. _example_amp:
 
-.. note:: A new example has been developed for demonstrating MAG3D v6.0.2. The example can be completed using previous versions. However, improvements in performance since v6.0 and v6.0.1 may result in slightly different recovered models.
+.. note:: The latest example has been generated using MAG3D v6.0.2. The exercise can be completed using previous versions. However, improvements in performance since v6.0 and v6.0.1 may result in slightly different recovered models.
 
 Example with Amplitude Data
 ===========================
@@ -9,7 +9,7 @@ Example with Amplitude Data
      :align: center
      :width: 700
 
-Here, the program library for Mag3d v6.0.2 will be used to:
+Here, the program library for MAG3D v6 will be used to:
 
     - create a susceptibility model on a tensor mesh
     - forward model magnetic data for a given survey and model
