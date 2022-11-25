@@ -1,6 +1,6 @@
 .. _elements:
 
-.. important:: The features and executable names within the MAG3D the v6.0, v6.0.1 and v6.0.2 packages remain the same. Differences in version number correspond to improvements in performance.
+.. important:: The features and executable names within the MAG3D the v6.0, v6.0.1 and v6.0.2 packages remain the same. Differences in version number correspond to improvements in performance and computational efficiency.
 
 
 Elements of the MAG3D v6 Package
