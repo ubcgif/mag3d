@@ -94,8 +94,8 @@ Graphical user interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 GUI-based utilities for these codes include respective viewers for the data and models. They are only available on Windows platforms and can be freely downloaded through the UBC-GIF website:
 
-   - `GM_DATA_VIEWER <http://www.eos.ubc.ca/~rshekhtm/utilities/gm-data-viewer.zip>`__: a utility for viewing raw surface or airborne data (not borehole data), error distributions, and for comparing observed to predicted data directly or as difference maps.
-   - `MeshTools3D <http://www.eos.ubc.ca/~rshekhtm/utilities/MeshTools3d.zip>`__: a utility for displaying resulting 3D models as volume renderings. Susceptibility volumes can be sliced in any direction, or isosurface renderings can be generated.
+   - **GM_DATA_VIEWER** (`x64 <https://owncloud.eoas.ubc.ca/s/JtzJYC5LXNyAQL9/download>`__ , `x86 <https://owncloud.eoas.ubc.ca/s/9z9PdQ9dztcpdYn/download>`__ ): a utility for viewing raw surface or airborne data (not borehole data), error distributions, and for comparing observed to predicted data directly or as difference maps.
+   - **MeshTools3D** (`x64 <https://owncloud.eoas.ubc.ca/s/WnqcWWRKSTrGtfY/download>`__ , `x86 <https://owncloud.eoas.ubc.ca/s/YTFde2gALsiN4Si/download>`__ ): a utility for displaying resulting 3D models as volume renderings. Susceptibility volumes can be sliced in any direction, or isosurface renderings can be generated.
 
 Licensing
 ---------
