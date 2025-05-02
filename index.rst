@@ -46,6 +46,11 @@ Highlights
     - an augmentation was made to preserve high performance for extremely large problems.
 
 
+**v6.0.4 Highlights:**
+
+    - some unintended behavior was observed in the sparse norm inversion when an active cells file is used in the inversion input file. This issue is corrected in v6.0.4.
+
+
 Sponsorship
 ^^^^^^^^^^^
 
