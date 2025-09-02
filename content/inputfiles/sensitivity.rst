@@ -14,21 +14,21 @@ The lines of input file for the executable are as follows:
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
 | Line # | Description                                                        | Description                                                       |
 +========+====================================================================+===================================================================+
-| 1      | :ref:`Tensor mesh<mag3d_input_sens_ln1>`                            | path to tensor mesh file                                         |
+| 1      | :ref:`Tensor mesh<mag3d_input_sens_ln1>`                           | path to tensor mesh file                                          |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 2      | :ref:`Data file<mag3d_input_sens_ln2>`                              | observed data file                                               |
+| 2      | :ref:`Data file<mag3d_input_sens_ln2>`                             | observed data file                                                |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 3      | :ref:`Topography<mag3d_input_sens_ln3>`                             | topography                                                       |
+| 3      | :ref:`Topography<mag3d_input_sens_ln3>`                            | topography                                                        |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 4      | :ref:`Distance/depth weights<mag3d_input_sens_ln4>`                 | name of distance/depth weights file                              |
+| 4      | :ref:`Distance/depth weights<mag3d_input_sens_ln4>`                | name of distance/depth weights file                               |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 5      | :ref:`Wavelet type<mag3d_input_sens_ln5>`                           | wavelet type used in compression                                 |
+| 5      | :ref:`Wavelet type<mag3d_input_sens_ln5>`                          | wavelet type used in compression                                  |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 6      | :ref:`Wavelet compression parameters<mag3d_input_sens_ln6>`         | *tol eps*                                                        |
+| 6      | :ref:`Wavelet compression parameters<mag3d_input_sens_ln6>`        | *tol eps*                                                         |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 7      | :ref:`Output diagnostic options<mag3d_input_sens_ln7>`              | 0 (no) or 1 (yes)                                                |
+| 7      | :ref:`Output diagnostic options<mag3d_input_sens_ln7>`             | 0 (no) or 1 (yes)                                                 |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 8      | :ref:`Scale sensitivity options<mag3d_input_sens_ln8>`              | scale for L2 or sparse inversion (ignored in v6.0.2 and later)   |
+| 8      | :ref:`Scale sensitivity options<mag3d_input_sens_ln8>`             | scale for L2 or sparse inversion (ignored in v6.0.2 and later)    |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
 
 
