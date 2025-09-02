@@ -14,21 +14,21 @@ The lines of input file for the executable are as follows:
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
 | Line # | Description                                                        | Description                                                       |
 +========+====================================================================+===================================================================+
-| 1      | :ref:`Tensor mesh<mag3d_input_inv_ln1>`                            | path to tensor mesh file                                          |
+| 1      | :ref:`Tensor mesh<mag3d_input_sens_ln1>`                            | path to tensor mesh file                                         |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 2      | :ref:`Data file<mag3d_input_inv_ln2>`                              | observed data file                                                |
+| 2      | :ref:`Data file<mag3d_input_sens_ln2>`                              | observed data file                                               |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 3      | :ref:`Topography<mag3d_input_inv_ln3>`                             | topography                                                        |
+| 3      | :ref:`Topography<mag3d_input_sens_ln3>`                             | topography                                                       |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 4      | :ref:`Distance/depth weights<mag3d_input_inv_ln4>`                 | name of distance/depth weights file                               |
+| 4      | :ref:`Distance/depth weights<mag3d_input_sens_ln4>`                 | name of distance/depth weights file                              |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 5      | :ref:`Wavelet type<mag3d_input_inv_ln5>`                           | wavelet type used in compression                                  |
+| 5      | :ref:`Wavelet type<mag3d_input_sens_ln5>`                           | wavelet type used in compression                                 |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 6      | :ref:`Wavelet compression parameters<mag3d_input_inv_ln6>`         | *tol eps*                                                         |
+| 6      | :ref:`Wavelet compression parameters<mag3d_input_sens_ln6>`         | *tol eps*                                                        |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 7      | :ref:`Output diagnostic options<mag3d_input_inv_ln7>`              | 0 (no) or 1 (yes)                                                 |
+| 7      | :ref:`Output diagnostic options<mag3d_input_sens_ln7>`              | 0 (no) or 1 (yes)                                                |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
-| 8      | :ref:`Scale sensitivity options<mag3d_input_inv_ln8>`              | scale for L2 or sparse inversion (ignored in v6.0.2 and later)    |
+| 8      | :ref:`Scale sensitivity options<mag3d_input_sens_ln8>`              | scale for L2 or sparse inversion (ignored in v6.0.2 and later)   |
 +--------+--------------------------------------------------------------------+-------------------------------------------------------------------+
 
 
@@ -45,26 +45,26 @@ An example of the input file for L2 inversion is shown below. You may also `Down
 Line Descriptions
 ^^^^^^^^^^^^^^^^^
 
-.. _mag3d_input_inv_ln1:
+.. _mag3d_input_sens_ln1:
 
     - **Tensor Mesh:** file path to a :ref:`tensor mesh <meshfile>` file
 
-.. _mag3d_input_inv_ln2:
+.. _mag3d_input_sens_ln2:
 
     - **Data File:** file path to the :ref:`observations file<magfile>`
 
-.. _mag3d_input_inv_ln3:
+.. _mag3d_input_sens_ln3:
 
     - **Topography:** there are two options for defining the topography.
 
         - type *null* for no defined topography (all cells are active)
         - provide the *filepath* to to a :ref:`topography file <topofile>`
 
-.. _mag3d_input_inv_ln4:
+.. _mag3d_input_sens_ln4:
 
     - **Distance/Depth Weights:** path to the depth or distance weights file output by the program *pfweight.exe* .
 
-.. _mag3d_input_inv_ln5:
+.. _mag3d_input_sens_ln5:
 
     - **Wavelet Type:** type of wavelets used to compress the rows of the sensitivity matrix. The choices are:
 
@@ -74,7 +74,7 @@ Line Descriptions
 
 .. note:: For most inversions, *daub2* works well. Other options remain for the user's own experimentation.
 
-.. _mag3d_input_inv_ln6:
+.. _mag3d_input_sens_ln6:
 
     - **Wavelet Parameters:**
 
@@ -88,14 +88,14 @@ Line Descriptions
 .. note:: If using MAG3D v6.0.2, a larger value of *eps* (e.g. 0.05) can generally be used for the wavelet compression. That is because the wavelet compression is acting on sensitivities after distance weighting has been applied, not before
 
 
-.. _mag3d_input_inv_ln7:
+.. _mag3d_input_sens_ln7:
 
     - **Output diagnostic options:**
 
         - *0* - Do not output diagnostic files
         - *1* - Output diagnostic files. In this case, the diagnostic files are: (1) the predicted data for a model of ρ=0.1 with the wavelet compressed sensitivity, (2) the predicted data for a model of ρ=0.1 with the full sensitivity, (3) the averaged sensitivity in each cell based on the wavelet compression. An extra line in the log file is also written giving the user the achieved reconstruction error (e.g. eps when itol=1 from above).
 
-.. _mag3d_input_inv_ln8:
+.. _mag3d_input_sens_ln8:
 
     - **Scale sensitivity options (ignored in v6.0.2 and later):** 
 
